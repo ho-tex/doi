@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd ..
+
+
+rm -f doi.zip
+zip doi.zip doi/doi.sty doi/README.md 
+
+mv doi.zip doi
+
