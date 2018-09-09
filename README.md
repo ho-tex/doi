@@ -14,9 +14,13 @@ as a style file by Maarten Sneep, with some minor changes suggested
 by Bruno Voisin to accomodate the Apple pdf framework
 Michael Orlov noticed that underscores were not handled appropriately 
 and sends in a patch.
+Now supported by the "Oberdiek Package Support Group" at GitHub.
 
 This code is placed under the LPPL.
 
 Original discussion on Google under:
 http://groups.google.com/group/comp.text.tex/msg/922919daa207d613
+
+Comments and bug reports to
+https://github.com/ho-tex/doi/issues
 
