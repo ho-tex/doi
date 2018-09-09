@@ -36,7 +36,7 @@
 %% September 2018: David Carlisle for "Oberdiek Package Support Group"
 %%     Move to github https://github.com/ho-tex/doi/issues
 %%     Add macro defaulting to new
-%%     https://doi.org URL but may be set to old http://dx.doi.org
+%%     https://doi.org/ URL but may be set to old http://dx.doi.org/
 %%
 
 
@@ -50,9 +50,9 @@
 
 %% To change the default DOI URL resoloution URL, redefine this command
 %% within your own code.
-%% Previous versions of this package always used http://dx.doi.org but
-%% The preferred address is now as given here, https://doi.org
-\newcommand{\doiurl}{https://doi.org}
+%% Previous versions of this package always used http://dx.doi.org/ but
+%% The preferred address is now as given here, https://doi.org/
+\newcommand{\doiurl}{https://doi.org/}
 
 %% The meat of the code.
 %% The first command opens a group, and changes a few catcodes.
@@ -88,9 +88,9 @@
   \edef\_{_}%
   \edef\textless{\@percentchar3C}% instead of {\string<} for Apple
   \edef\textgreater{\@percentchar3E}% instead of {\sting>} for Apple
-  \edef\x{\toks1={\noexpand\href{\doiurl/#1}}}% 
+  \edef\x{\toks2={\noexpand\href{\doiurl#1}}}% 
   \x
-  \edef\x{\endgroup\doitext\the\toks1 \the\toks0}%
+  \edef\x{\endgroup\doitext\the\toks2 \the\toks0}%
   \x
 }
 
