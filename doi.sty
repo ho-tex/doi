@@ -99,7 +99,7 @@
   \edef\_{_}%
   \edef\textless{\@percentchar3C}% instead of {\string<} for Apple
   \edef\textgreater{\@percentchar3E}% instead of {\sting>} for Apple
-  \edef\x{\toks2={\noexpand\href{\doiurl#1}}}% 
+  \edef\x{\toks2={\ifdefined\href\noexpand\href{\doiurl#1}\fi}}% 
   \x
   \edef\x{\endgroup\doitext\the\toks2 \the\toks0}%
   \x
