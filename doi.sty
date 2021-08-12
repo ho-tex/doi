@@ -39,10 +39,21 @@
 %%     https://doi.org/ URL but may be set to old http://dx.doi.org/
 %%
 
+%% Declare two complementary boolean options [no]hyperref that determine
+%% if hyperref should be loaded in this package.
+\newif\if@doihyperref\@doihyperreftrue
+\DeclareOption{hyperref}{\@doihyperreftrue}
+\DeclareOption{nohyperref}{\@doihyperreffalse}
+
+%% Execute default options and process the options passed to the package.
+\ExecuteOptions{hyperref} % default is the old behaviour, to load hyperref
+\ProcessOptions\relax
 
 %% We need hyperref, but you probably want to load hyperref 
 %% beforehand, or set some options later on.
-\RequirePackage{hyperref}
+\if@doihyperref
+  \RequirePackage{hyperref}
+\fi
 
 %% To change the default prefix, redefine this command within your own code.
 %% It takes no argument, which is different from the doipubmed package.
